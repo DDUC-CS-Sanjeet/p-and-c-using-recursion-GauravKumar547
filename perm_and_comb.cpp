@@ -31,7 +31,7 @@ int combination(int n, int r)
 	}
 	else
 	{
-		return n*combination(n-1,r-1)/r;
+		return 1.0*combination(n-1,r-1)/r*n;
 	}
 	
   return 0;
@@ -39,7 +39,8 @@ int combination(int n, int r)
 
 int main()
 {
-	int n,r,result,choose;
+	int n,r,choose;
+        double result;
 	char choice;
 	
 	do
@@ -88,7 +89,7 @@ int main()
 				
 		}
 		cout<<result<<endl;
-		cout<<"Do you want to continue(Y/N)";
+		cout<<"Do you want to continue(Y/N): ";
 		cin>>choice;		
 	}while(choice=='Y'||choice=='y');
 
